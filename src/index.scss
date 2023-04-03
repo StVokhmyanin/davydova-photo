@@ -1,0 +1,30 @@
+@import './vendor/_breakpoints.scss';
+@import './vendor/_variables.scss';
+@import './vendor/fonts/fonts.css';
+@import './components/HeaderButton/HeaderButton.scss';
+@import './components/Header/Header.scss';
+
+
+body {
+  margin: 0;
+  font-family: 'Raleway', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
