@@ -1,12 +1,8 @@
-import React from 'react';
-import StyledPreloader from './Preloader.styled';
+import React from "react";
+import StyledPreloader from "./Preloader.styled";
 
-const Preloader = () => {
-  return (
-    <StyledPreloader>
-      <div className='center'></div>
-    </StyledPreloader>
-  );
+const Preloader = ({ loading }) => {
+  return <>{loading && <StyledPreloader />}</>;
 };
 
 export default Preloader;

@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 const StyledPostList = styled.ul`
-  list-style-type: none;
-  margin: 0;
   padding: 30px 0;
   display: grid;
-  grid-template-columns: repeat(3, 305px);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, max-content);
   gap: 25px;
+  background-color: #FBFBFA;
 
   li:nth-child(n + 7) {
     display: none;

@@ -9,10 +9,15 @@ align-items: center;
 z-index: 1;
 
 p {
+  padding-top: 20px;
   max-width: 600px;
   font-size: 16px;
   text-align: center;
   font-weight: 400;
+
+  @media (max-width: 767px) {
+    max-width: 80%;
+  }
 }
 
 a {

@@ -3,12 +3,15 @@ import { NavLink } from "react-router-dom";
 import StyledBanner from "./Banner.styled";
 
 const Banner = ({ props, marginTop }) => {
+
+  const {title, image, text, link} = props;
+
   const bannerTag = () => {
-    if (props.link) {
+    if (link) {
       return (
-        <NavLink to={props.link}>
-          <h2>{props.title}</h2>
-          {props.text.map((item, i) => {
+        <NavLink to={link}>
+          <h2>{title}</h2>
+          {text.map((item, i) => {
             return <h3 key={i}>{item}</h3>;
           })}
         </NavLink>
@@ -16,8 +19,8 @@ const Banner = ({ props, marginTop }) => {
     } else {
       return (
         <div>
-          <h2>{props.title}</h2>
-          {props.text.map((item, i) => {
+          <h2>{title}</h2>
+          {text.map((item, i) => {
             return <h3 key={i}>{item}</h3>;
           })}
         </div>
@@ -28,7 +31,7 @@ const Banner = ({ props, marginTop }) => {
   return (
     <StyledBanner marginTop={marginTop}>
       {bannerTag()}
-      <img src={props.image} alt={props.title} />
+      <img src={image} alt={title} />
     </StyledBanner>
   );
 };

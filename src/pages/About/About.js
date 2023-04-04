@@ -5,7 +5,6 @@ import AboutInfo from "../../components/AboutInfo/AboutInfo";
 import AboutFacts from "../../components/AboutFacts/AboutFacts";
 import me from "../../assets/images/me.jpg";
 import shootingPhoto from "../../assets/images/shooting.jpg";
-import photo from '../../assets/images/1.jpg';
 import AboutImportant from "../../components/AboutImportant/AboutImportant";
 
 const About = () => {
@@ -25,8 +24,6 @@ const About = () => {
       'Важно не просто сфотографировать человека по референсу - я стремлюсь раскрыть героя в кадре, показать его "Я", характер и внутренний мир.',
     ],
   };
-
-
 
   return (
     <StyledAbout>

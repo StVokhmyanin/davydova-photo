@@ -10,7 +10,7 @@ const CategoryList = ({categories}) => {
       {
         categories.map((category, i) => {
           return(
-            <NavigationButton key={i} slug={category.slug} name={category.name} />
+            <NavigationButton key={i} slug={`./category/${category.slug}`} name={category.name} />
           )
         })
       }

@@ -5,7 +5,7 @@ import StyledPost from './Post.styled';
 const Post = ({post}) => {
   return (
     <StyledPost>
-      <NavLink to={post.link}>
+      <NavLink to={post.slug}>
         <img src={post._embedded['wp:featuredmedia']['0']['source_url']} alt={post.title.rendered} />
       </NavLink>
     </StyledPost>

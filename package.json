@@ -20,7 +20,7 @@
     "scripts": {
         "crabuild": "react-scripts build",
         "craeject": "react-scripts eject",
-        "crastart": "react-scripts start",
+        "crastart": "react-scripts --openssl-legacy-provider start",
         "cratest": "react-scripts test",
         "build": "wptheme-scripts --openssl-legacy-provider build",
         "start": "wptheme-scripts --openssl-legacy-provider start",
@@ -42,6 +42,6 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "/davydova-theme/wp-content/themes/davydova-photo",
-    "browserLaunchTo": "http://localhost/davydova-theme"
+    "homepage": "http://localhost/davydova-theme/wp-content/themes/davydova-photo",
+    "browserLaunchTo": "http://localhost:3000"
 }

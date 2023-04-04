@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import MainSwiper from "../../components/MainSwiper/MainSwiper";
 import StyledMain from "./Main.styled";
@@ -7,8 +7,14 @@ import Banner from "../../components/Banner/Banner";
 import LastPostsList from "../../components/LastPostsList/LastPostsList";
 import aboutImage from "../../assets/images/about.jpg";
 import pricingImage from "../../assets/images/pricing.jpg";
+import { PostsContext, CategoryContext } from "../../App/App";
+import CategorySwiper from "../../components/CategorySwiper/CategorySwiper";
 
-const Main = ({ posts, categories, lastPosts }) => {
+const Main = ({ lastPosts }) => {
+
+  const posts = useContext(PostsContext);
+  const categories = useContext(CategoryContext);
+
   const about = {
     link: "me",
     title: "обо мне",
@@ -35,10 +41,7 @@ const Main = ({ posts, categories, lastPosts }) => {
         "Творчеству нельзя ставить рамки. Ведь, держа камеру в руках, у тебя
         появляется чудесная возможность "рассказывать" то, что ты видишь"
       </p>
-      <PostList
-        posts={posts}
-        categories={categories}
-      />
+      <CategorySwiper posts={posts} categories={categories} />
       <blockquote>
         «Ничего не происходит, когда вы сидите у себя дома. Я всегда ношу камеру
         с собой в любое время... Я просто снимаю то, что меня интересует в

@@ -1,0 +1,17 @@
+.category-swiper {
+  width: 100%;
+  max-width: 900px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: "space-between";
+
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}

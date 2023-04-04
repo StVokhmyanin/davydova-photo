@@ -5,6 +5,7 @@ display: block;
 width: 100%;
 height: 410px;
 transition: all .3s linear;
+
 :hover {
   opacity: .6;
 }

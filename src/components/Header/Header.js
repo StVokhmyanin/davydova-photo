@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import StyledCategoryList from "../CategoryList/CategoryList.styled";
 import CategoryList from "../CategoryList/CategoryList";
 import Logo from "../Logo/Logo";
 import NavigationButton from "../NavigationButton/NavigationButton";
 import HeaderButton from "../HeaderButton/HeaderButton";
 import { useLocation } from "react-router";
+import { CategoryContext } from "../../App/App";
 
-const Header = ({ categories, links }) => {
+const Header = ({ links }) => {
 
+  const categories = useContext(CategoryContext);
   const { pathname } = useLocation();
   const [activeHeader, setActiveHeader] = useState(false);
 

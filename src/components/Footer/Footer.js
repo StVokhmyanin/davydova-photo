@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import StyledFooter from "./Footer.styled";
 import FooterLink from "../FooterLink/FooterLink";
-import logoFooter from "../../assets/images/logo-footer.svg";
 import { NavLink } from "react-router-dom";
+import { CategoryContext } from "../../App/App";
 
-const Footer = ({ categories, links }) => {
+
+const Footer = ({ links }) => {
+
+  const categories = useContext(CategoryContext);
+
   return (
     <StyledFooter>
       <ul>
@@ -25,7 +29,6 @@ const Footer = ({ categories, links }) => {
         <FooterLink props={{ name: "my-mail@gmail.com", slug: "mailto:my-mail@gmail.com" }} />
         <FooterLink props={{ name: "+7 999 123 45 67", slug: "tel:+79991234567" }} />
         <FooterLink props={{ name: "@tv.davydova", slug: "https://instagram.com/tv.davydova" }} />
-
       </ul>
     </StyledFooter>
   );
